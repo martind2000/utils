@@ -1,0 +1,364 @@
+[
+  {
+    "name": "arrayFromObj",
+    "category": "",
+    "description": "<p>Create an array from an Object using specified fields</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.arrayFromObj({ a: 1, b: 2 }, ['a', 'b']) // => [1, 2]\n",
+        "args": [
+          {
+            "name": "jsonObj",
+            "description": "The Original object"
+          },
+          {
+            "name": "wantedFields",
+            "description": "The required fields\n"
+          }
+        ],
+        "returns": {
+          "name": "Array",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "debounce",
+    "category": "",
+    "description": "<p>Debounce the calling of a function</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.debounce(fn, time)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "",
+        "args": [
+          {
+            "name": "fn",
+            "description": "The function to be debounced"
+          },
+          {
+            "name": "time",
+            "description": "How long to wait"
+          }
+        ],
+        "returns": {
+          "name": "Object",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "distance",
+    "category": "",
+    "description": "<p>Calculate the distance between two lat long points</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.distance(lat1, long1, lat2, long2)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "distance(1, 1, 2, 2) // => 157.22543203805722;\n",
+        "args": [
+          {
+            "name": "lat1"
+          },
+          {
+            "name": "lon1"
+          },
+          {
+            "name": "lat2"
+          },
+          {
+            "name": "lon2",
+            "description": "\n"
+          }
+        ],
+        "returns": {
+          "name": "number",
+          "description": ""
+        }
+      },
+      {
+        "tag": null,
+        "signature": "U.distance(latLong1, latLong2)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "const a: U.LatLong = new LatLong(1, 1)\nconst b: U.LatLong = new LatLong(2, 2)\nU.distance(a, b) // => 157.22543203805722\n",
+        "args": [
+          {
+            "name": "latLong1"
+          },
+          {
+            "name": "latLong2",
+            "description": "\n"
+          }
+        ],
+        "returns": {
+          "name": "number",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "extractFromObj",
+    "category": "",
+    "description": "<p>Extract an object from another object using specific fields</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.extractFromObj(jsonObj, wantedFields)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.extractFromObj({ a: 1, b: 2 }, ['a']) // => { a: 1 }\n",
+        "args": [
+          {
+            "name": "jsonObj",
+            "description": "The source object"
+          },
+          {
+            "name": "wantedFields",
+            "description": "The required fields"
+          }
+        ],
+        "returns": {
+          "name": "Object",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "hasOwn",
+    "category": "",
+    "description": "<p>Check if an object has an property</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.hasOwn({ bob: '1' }, 'bob') // => true\n",
+        "args": [
+          {
+            "name": "obj",
+            "description": "The source object"
+          },
+          {
+            "name": "prop",
+            "description": "The required property"
+          }
+        ],
+        "returns": {
+          "name": "boolean",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "hourFloor",
+    "category": "",
+    "description": "<p>Get the hour floor as a Base 32 string</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.hourFloor(1605532173) // => '1fnp540'\n",
+        "args": [
+          {
+            "name": "timestamp",
+            "description": "The timestamp as a number"
+          }
+        ],
+        "returns": {
+          "name": "string",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "isEmpty",
+    "category": "",
+    "description": "<p>Check if an object is empty</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.isEmpty({}) // => true\nU.isEmpty({ bob: true }) // => false\n",
+        "args": [
+          {
+            "name": "obj",
+            "description": "The object being checked\n"
+          }
+        ],
+        "returns": {
+          "name": "boolean",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "maybePluralize",
+    "category": "",
+    "description": "<p>Maybe pluralize a count:</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.maybePluralize(number, noun, suffix)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.maybePluralize(1, 'Bag', 's') // => 1 Bag\nU.maybePluralize(5, 'Bag', 's') // => 5 Bags\n",
+        "args": [
+          {
+            "name": "count",
+            "description": "the value counting"
+          },
+          {
+            "name": "noun",
+            "description": "the name of the value"
+          },
+          {
+            "name": "suffix",
+            "description": "the suffix"
+          }
+        ],
+        "returns": {
+          "name": "string",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "once",
+    "category": "",
+    "description": "<p>Trigger a function once and then prevent it from triggering again</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.once(fn)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "",
+        "args": [
+          {
+            "name": "fn",
+            "description": "\n"
+          }
+        ],
+        "returns": {
+          "name": "Object",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "partOfDay",
+    "category": "",
+    "description": "<p>Get a string phrase for the current time of day</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.partOfDay(timeString, today)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.partOfDay('13:00') // => 'Afternoon'\n",
+        "args": [
+          {
+            "name": "timeString"
+          },
+          {
+            "name": "today",
+            "description": "\n"
+          }
+        ],
+        "returns": {
+          "name": "string",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "throttle",
+    "category": "",
+    "description": "<p>Throttle the calling of a function</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.throttle(callback, limit)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "",
+        "args": [
+          {
+            "name": "callback"
+          },
+          {
+            "name": "limit",
+            "description": "\n"
+          }
+        ],
+        "returns": {
+          "name": "Object",
+          "description": ""
+        }
+      }
+    ]
+  },
+  {
+    "name": "toHour",
+    "category": "",
+    "description": "<p>Return the number of Milliseconds to the hour for the supplied timestamp</p>\n",
+    "methods": [
+      {
+        "tag": null,
+        "signature": "U.toHour(currentTimsestamp, extra)\n",
+        "category": "",
+        "indexed": false,
+        "pipeable": false,
+        "example": "U.toHour('13:00') // => 1605532173\n",
+        "args": [
+          {
+            "name": "currentTimsestamp"
+          },
+          {
+            "name": "extra"
+          }
+        ],
+        "returns": {
+          "name": "number",
+          "description": ""
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1944 @@
+{
+	"id": 0,
+	"name": "@rakh/utils",
+	"kind": 0,
+	"flags": {},
+	"originalName": "",
+	"children": [
+		{
+			"id": 1,
+			"name": "\"arrayFromObj\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/arrayFromObj.ts",
+			"children": [
+				{
+					"id": 2,
+					"name": "arrayFromObj",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "arrayFromObj",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Create an array from an Object using specified fields",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n   U.arrayFromObj({ a: 1, b: 2 }, ['a', 'b']) // => [1, 2]\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 4,
+									"name": "jsonObj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The Original object"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Object"
+									}
+								},
+								{
+									"id": 5,
+									"name": "wantedFields",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The required fields\n"
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "any"
+								}
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "arrayFromObj.ts",
+							"line": 9,
+							"character": 28
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "arrayFromObj.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "\"arrayFromObj.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/arrayFromObj.test.ts",
+			"sources": [
+				{
+					"fileName": "arrayFromObj.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 7,
+			"name": "\"debounce\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/debounce.ts",
+			"children": [
+				{
+					"id": 8,
+					"name": "debounce",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 9,
+							"name": "debounce",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Debounce the calling of a function",
+								"returns": "\n",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.debounce(fn, time)\n\n\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 10,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The function to be debounced"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 11,
+									"name": "time",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "How long to wait"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "debounce.ts",
+							"line": 12,
+							"character": 24
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						8
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "debounce.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "\"debounce.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/debounce.test.ts",
+			"sources": [
+				{
+					"fileName": "debounce.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 21,
+			"name": "\"distance\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/distance.ts",
+			"children": [
+				{
+					"id": 22,
+					"name": "distance",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Calculate the Distance between two lat long points"
+					},
+					"signatures": [
+						{
+							"id": 23,
+							"name": "distance",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Calculate the distance between two lat long points",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.distance(lat1, long1, lat2, long2)\n"
+									},
+									{
+										"tag": "example",
+										"text": "\n   distance(1, 1, 2, 2) // => 157.22543203805722;\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 24,
+									"name": "lat1",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 25,
+									"name": "lon1",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 26,
+									"name": "lat2",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 27,
+									"name": "lon2",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 28,
+							"name": "distance",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Calculate the distance between two lat long points",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.distance(latLong1, latLong2)\n"
+									},
+									{
+										"tag": "example",
+										"text": "\n\n   const a: U.LatLong = new LatLong(1, 1);\n   const b: U.LatLong = new LatLong(2, 2);\n   U.distance(a, b) // => 157.22543203805722\n\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 29,
+									"name": "latLong1",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"id": 14,
+										"name": "LatLong"
+									}
+								},
+								{
+									"id": 30,
+									"name": "latLong2",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "reference",
+										"id": 14,
+										"name": "LatLong"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "distance.ts",
+							"line": 16,
+							"character": 24
+						},
+						{
+							"fileName": "distance.ts",
+							"line": 33,
+							"character": 24
+						},
+						{
+							"fileName": "distance.ts",
+							"line": 38,
+							"character": 24
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						22
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "distance.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 31,
+			"name": "\"distance.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/distance.test.ts",
+			"sources": [
+				{
+					"fileName": "distance.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "\"extractFromObj\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/extractFromObj.ts",
+			"children": [
+				{
+					"id": 33,
+					"name": "extractFromObj",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 34,
+							"name": "extractFromObj",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Extract an object from another object using specific fields",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.extractFromObj(jsonObj, wantedFields)\n"
+									},
+									{
+										"tag": "example",
+										"text": "\n   U.extractFromObj({ a: 1, b: 2 }, ['a']) // => { a: 1 }\n\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 35,
+									"name": "jsonObj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The source object"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Object"
+									}
+								},
+								{
+									"id": 36,
+									"name": "wantedFields",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The required fields"
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 37,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {
+										"isExported": true
+									},
+									"sources": [
+										{
+											"fileName": "extractFromObj.ts",
+											"line": 12,
+											"character": 72
+										}
+									]
+								}
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "extractFromObj.ts",
+							"line": 12,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						33
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "extractFromObj.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 38,
+			"name": "\"extractFromObj.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/extractFromObj.test.ts",
+			"sources": [
+				{
+					"fileName": "extractFromObj.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 39,
+			"name": "\"hasOwn\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/hasOwn.ts",
+			"children": [
+				{
+					"id": 40,
+					"name": "hasOwn",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 41,
+							"name": "hasOwn",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Check if an object has an property",
+								"returns": "\n",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n   U.hasOwn({bob:'1'}, 'bob') // => true\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 42,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The source object"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Object"
+									}
+								},
+								{
+									"id": 43,
+									"name": "prop",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The required property"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "hasOwn.ts",
+							"line": 12,
+							"character": 22
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						40
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "hasOwn.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 44,
+			"name": "\"hasOwn.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/hasOwn.test.ts",
+			"sources": [
+				{
+					"fileName": "hasOwn.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 45,
+			"name": "\"hourFloor\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/hourFloor.ts",
+			"children": [
+				{
+					"id": 46,
+					"name": "hourFloor",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 47,
+							"name": "hourFloor",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Get the hour floor as a Base 32 string",
+								"returns": "\n",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n   U.hourFloor(1605532173) // => '1fnp540'\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 48,
+									"name": "timestamp",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The timestamp as a number"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "hourFloor.ts",
+							"line": 10,
+							"character": 25
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						46
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "hourFloor.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 49,
+			"name": "\"hourFloor.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/hourFloor.test.ts",
+			"sources": [
+				{
+					"fileName": "hourFloor.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 79,
+			"name": "\"index\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/index.ts",
+			"children": [
+				{
+					"id": 87,
+					"name": "LatLong",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 14
+				},
+				{
+					"id": 80,
+					"name": "arrayFromObj",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 2
+				},
+				{
+					"id": 81,
+					"name": "debounce",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 8
+				},
+				{
+					"id": 82,
+					"name": "distance",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 22
+				},
+				{
+					"id": 83,
+					"name": "extractFromObj",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 33
+				},
+				{
+					"id": 84,
+					"name": "hasOwn",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 40
+				},
+				{
+					"id": 85,
+					"name": "hourFloor",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 46
+				},
+				{
+					"id": 86,
+					"name": "isEmpty",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 51
+				},
+				{
+					"id": 88,
+					"name": "maybePluralize",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 55
+				},
+				{
+					"id": 89,
+					"name": "once",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 61
+				},
+				{
+					"id": 90,
+					"name": "partOfDay",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 65
+				},
+				{
+					"id": 91,
+					"name": "throttle",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 70
+				},
+				{
+					"id": 92,
+					"name": "toHour",
+					"kind": 16777216,
+					"kindString": "Reference",
+					"flags": {
+						"isExported": true
+					},
+					"target": 75
+				}
+			],
+			"groups": [
+				{
+					"title": "References",
+					"kind": 16777216,
+					"children": [
+						87,
+						80,
+						81,
+						82,
+						83,
+						84,
+						85,
+						86,
+						88,
+						89,
+						90,
+						91,
+						92
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 50,
+			"name": "\"isEmpty\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/isEmpty.ts",
+			"children": [
+				{
+					"id": 51,
+					"name": "isEmpty",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 52,
+							"name": "isEmpty",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Check if an object is empty",
+								"tags": [
+									{
+										"tag": "example",
+										"text": "\n   U.isEmpty({}) // => true\n   U.isEmpty({ bob: true }) // => false\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 53,
+									"name": "obj",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "The object being checked\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Object"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "isEmpty.ts",
+							"line": 9,
+							"character": 23
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						51
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "isEmpty.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 93,
+			"name": "\"isEmpty.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/isEmpty.test.ts",
+			"sources": [
+				{
+					"fileName": "isEmpty.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 13,
+			"name": "\"latLong\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/latLong.ts",
+			"children": [
+				{
+					"id": 14,
+					"name": "LatLong",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Calculate the distance between two latLongs",
+						"tags": [
+							{
+								"tag": "param",
+								"text": "",
+								"param": "lat1"
+							},
+							{
+								"tag": "param",
+								"text": "",
+								"param": "lon1"
+							},
+							{
+								"tag": "param",
+								"text": "",
+								"param": "lat2"
+							},
+							{
+								"tag": "param",
+								"text": "",
+								"param": "lon2"
+							},
+							{
+								"tag": "returns",
+								"text": "\n"
+							}
+						]
+					},
+					"children": [
+						{
+							"id": 17,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 18,
+									"name": "new LatLong",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {
+										"isExported": true
+									},
+									"parameters": [
+										{
+											"id": 19,
+											"name": "lat",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 20,
+											"name": "long",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isExported": true
+											},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"id": 14,
+										"name": "LatLong"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "latLong.ts",
+									"line": 11,
+									"character": 15
+								}
+							]
+						},
+						{
+							"id": 15,
+							"name": "lat",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "latLong.ts",
+									"line": 10,
+									"character": 5
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						},
+						{
+							"id": 16,
+							"name": "long",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true
+							},
+							"sources": [
+								{
+									"fileName": "latLong.ts",
+									"line": 11,
+									"character": 6
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								17
+							]
+						},
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								15,
+								16
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "latLong.ts",
+							"line": 9,
+							"character": 20
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						14
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "latLong.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 54,
+			"name": "\"maybePluralize\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/maybePluralize.ts",
+			"children": [
+				{
+					"id": 55,
+					"name": "maybePluralize",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 56,
+							"name": "maybePluralize",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Maybe pluralize a count:",
+								"returns": "\n",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.maybePluralize(number, noun, suffix)\n"
+									},
+									{
+										"tag": "example",
+										"text": "\n   U.maybePluralize(1, 'Bag', 's') // => 1 Bag\n   U.maybePluralize(5, 'Bag', 's') // => 5 Bags\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 57,
+									"name": "count",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "the value counting"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 58,
+									"name": "noun",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "the name of the value"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 59,
+									"name": "suffix",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "the suffix"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									},
+									"defaultValue": "\"s\""
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "maybePluralize.ts",
+							"line": 16,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						55
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "maybePluralize.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 94,
+			"name": "\"maybePluralize.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/maybePluralize.test.ts",
+			"sources": [
+				{
+					"fileName": "maybePluralize.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 60,
+			"name": "\"once\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/once.ts",
+			"children": [
+				{
+					"id": 61,
+					"name": "once",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 62,
+							"name": "once",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Trigger a function once and then prevent it from triggering again",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.once(fn)\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 63,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "once.ts",
+							"line": 9,
+							"character": 20
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						61
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "once.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 95,
+			"name": "\"once.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/once.test.ts",
+			"sources": [
+				{
+					"fileName": "once.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 64,
+			"name": "\"partOfDay\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/partOfDay.ts",
+			"children": [
+				{
+					"id": 65,
+					"name": "partOfDay",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 66,
+							"name": "partOfDay",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Get a string phrase for the current time of day",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.partOfDay(timeString, today)"
+									},
+									{
+										"tag": "example",
+										"text": "\n   U.partOfDay('13:00') // => 'Afternoon'\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 67,
+									"name": "timeString",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 68,
+									"name": "today",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									},
+									"defaultValue": "false"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "partOfDay.ts",
+							"line": 11,
+							"character": 25
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						65
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "partOfDay.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 96,
+			"name": "\"partOfDay.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/partOfDay.test.ts",
+			"sources": [
+				{
+					"fileName": "partOfDay.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 69,
+			"name": "\"throttle\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/throttle.ts",
+			"children": [
+				{
+					"id": 70,
+					"name": "throttle",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 71,
+							"name": "throttle",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Throttle the calling of a function",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.throttle(callback, limit)\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 72,
+									"name": "callback",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 73,
+									"name": "limit",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "throttle.ts",
+							"line": 10,
+							"character": 24
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						70
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "throttle.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 97,
+			"name": "\"throttle.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/throttle.test.ts",
+			"sources": [
+				{
+					"fileName": "throttle.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 74,
+			"name": "\"toHour\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/toHour.ts",
+			"children": [
+				{
+					"id": 75,
+					"name": "toHour",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 76,
+							"name": "toHour",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {
+								"isExported": true
+							},
+							"comment": {
+								"shortText": "Return the number of Milliseconds to the hour for the supplied timestamp",
+								"returns": "\n*",
+								"tags": [
+									{
+										"tag": "signature",
+										"text": "\n   U.toHour(currentTimsestamp, extra)"
+									},
+									{
+										"tag": "example",
+										"text": "\n   U.toHour('13:00') // => 1605532173\n"
+									}
+								]
+							},
+							"parameters": [
+								{
+									"id": 77,
+									"name": "currentTimsestamp",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								},
+								{
+									"id": 78,
+									"name": "extra",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isExported": true
+									},
+									"comment": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "0"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "toHour.ts",
+							"line": 12,
+							"character": 22
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						75
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "toHour.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 98,
+			"name": "\"toHour.test\"",
+			"kind": 1,
+			"kindString": "Module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/home/martin/dev/JS/utils/ts-src/toHour.test.ts",
+			"sources": [
+				{
+					"fileName": "toHour.test.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Modules",
+			"kind": 1,
+			"children": [
+				1,
+				6,
+				7,
+				12,
+				21,
+				31,
+				32,
+				38,
+				39,
+				44,
+				45,
+				49,
+				79,
+				50,
+				93,
+				13,
+				54,
+				94,
+				60,
+				95,
+				64,
+				96,
+				69,
+				97,
+				74,
+				98
+			]
+		}
+	]
+}

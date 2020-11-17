@@ -1,0 +1,163 @@
+///<reference path="../node_modules/@types/node/globals.d.ts"/>
+/**
+ *
+ * @param timeString
+ * @param today
+ * @returns {string}
+ */
+const partOfDay = (timeString:string, today:boolean = false):string => {
+    console.log(new Date());
+    if (timeString === undefined || timeString === null)
+        timeString = (new Date()).getHours().toString();
+
+    if (today === undefined)
+        today = false;
+
+    const hours:number = parseInt(timeString.substring(0, 2),10);
+
+    let dayBit;
+
+    console.log('Hours', hours);
+
+    if (hours >= 0 && hours < 4)
+        dayBit = 'Late Night';
+
+    else if (hours >= 4 && hours < 7)
+        dayBit = 'Early Morning';
+
+    else if (hours >= 7 && hours < 12)
+        dayBit = 'Morning';
+
+    else if (hours >= 12 && hours < 17)
+        dayBit = 'Afternoon';
+
+    else if (hours < 21)
+        dayBit = 'Evening';
+
+    else
+        dayBit = 'Night';
+
+    if (today)
+        dayBit = dayBit === 'night' ? 'tonight' : `this ${dayBit}`;
+
+    console.log('partOfDay', dayBit);
+
+    return dayBit;
+};
+
+
+/**
+ *
+ * @param extra
+ * @returns {number}
+ */
+const toHour = (extra:number = 0):number => {
+    const now = new Date();
+    return (3600000 - (now.getTime() % 3600000)) + extra;
+};
+
+/**
+ *
+ * @returns {string}
+ */
+const hourFloor = ():string => {
+    const now:Date = new Date();
+
+    return (~~(now.getTime() / 3600000) * 3600000).toString(32);
+};
+
+/**
+ * Calculate the distance between two latLongs
+ * @param lat1
+ * @param lon1
+ * @param lat2
+ * @param lon2
+ * @returns {number}
+ */
+const distance = (lat1:number, lon1:number, lat2:number, lon2:number) : number => {
+    const p = 0.017453292519943295; // Math.PI / 180
+    const c = Math.cos;
+    const a = 0.5 - c((lat2 - lat1) * p) / 2 +
+        c(lat1 * p) * c(lat2 * p) *
+        (1 - c((lon2 - lon1) * p)) / 2;
+
+    return 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
+};
+
+/**
+ * Maybe pluralize a count:
+ * EG:
+ * > 1 Bag
+ * > 5 Bags
+ *
+ * @param count
+ * @param noun
+ * @param suffix
+ * @returns {string}
+ */
+const maybePluralize = (count:number, noun:string, suffix = 's'):string =>
+    `${count} ${noun}${count !== 1 ? suffix : ''}`;
+
+
+
+/**
+ *
+ * @param fn
+ * @param time
+ * @returns {Function}
+ * @private
+ */
+const debounce = function (fn:Function, time:number):Function {
+    let timeout:NodeJS.Timeout;
+
+    return function (...args:any):any { // <-- not an arrow function
+        const functionCall = () => fn.apply(this, args);
+
+        clearTimeout(timeout);
+        timeout = setTimeout(functionCall, time);
+    };
+};
+
+
+/**
+ *
+ * @param callback
+ * @param limit
+ * @returns {Function}
+ * @private
+ */
+const throttle = (callback:Function, limit:number):Function => {
+    var wait:boolean = false;
+
+    return function (...args:any):any {
+        if (!wait) {
+            callback.apply(null, args);
+            wait = true;
+            setTimeout(function () {
+                wait = false;
+            }, limit);
+        }
+    };
+};
+
+/**
+ *
+ * @param func
+ * @returns {function(): *}
+ * @private
+ */
+const once = function (func:Function): Function {
+    var alreadyCalled = false;
+    var result:Function;
+
+    return (...args: any): any => {
+        if (!alreadyCalled) {
+            result = func.apply(this, args);
+            alreadyCalled = true;
+        }
+
+        return result;
+    };
+};
+
+
