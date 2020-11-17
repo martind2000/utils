@@ -6,37 +6,23 @@
  */
 const partOfDay = (timeString, today) => {
   console.log(new Date());
-  if (timeString === undefined || timeString === null)
-    timeString = (new Date()).getHours().toString();
+  if (timeString === undefined || timeString === null) timeString = new Date().getHours().toString();
 
-  if (today === undefined)
-    today = false;
+  if (today === undefined) today = false;
 
   const hours = timeString.substring(0, 2);
   let dayBit;
 
   console.log('Hours', hours);
 
-  if (hours >= 0 && hours < 4)
-    dayBit = 'Late Night';
+  if (hours >= 0 && hours < 4) dayBit = 'Late Night';
+  else if (hours >= 4 && hours < 7) dayBit = 'Early Morning';
+  else if (hours >= 7 && hours < 12) dayBit = 'Morning';
+  else if (hours >= 12 && hours < 17) dayBit = 'Afternoon';
+  else if (hours < 21) dayBit = 'Evening';
+  else dayBit = 'Night';
 
-  else if (hours >= 4 && hours < 7)
-    dayBit = 'Early Morning';
-
-  else if (hours >= 7 && hours < 12)
-    dayBit = 'Morning';
-
-  else if (hours >= 12 && hours < 17)
-    dayBit = 'Afternoon';
-
-  else if (hours < 21)
-    dayBit = 'Evening';
-
-  else
-    dayBit = 'Night';
-
-  if (today)
-    dayBit = dayBit === 'night' ? 'tonight' : `this ${dayBit}`;
+  if (today) dayBit = dayBit === 'night' ? 'tonight' : `this ${dayBit}`;
 
   console.log('partOfDay', dayBit);
 
@@ -50,7 +36,7 @@ const partOfDay = (timeString, today) => {
  */
 const toHour = (extra = 0) => {
   const now = new Date();
-  return (3600000 - (now.getTime() % 3600000)) + extra;
+  return 3600000 - (now.getTime() % 3600000) + extra;
 };
 
 /**
@@ -75,10 +61,10 @@ const getWeek = function (d) {
   var firstThursday = target.valueOf();
   target.setMonth(0, 1);
   if (target.getDay() != 4) {
-    target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+    target.setMonth(0, 1 + ((4 - target.getDay() + 7) % 7));
   }
   return 1 + Math.ceil((firstThursday - target) / 604800000);
-}
+};
 
 /**
  *
@@ -91,16 +77,12 @@ const getWeek = function (d) {
 const distance = (lat1, lon1, lat2, lon2) => {
   const p = 0.017453292519943295; // Math.PI / 180
   const c = Math.cos;
-  const a = 0.5 - c((lat2 - lat1) * p) / 2 +
-    c(lat1 * p) * c(lat2 * p) *
-    (1 - c((lon2 - lon1) * p)) / 2;
+  const a = 0.5 - c((lat2 - lat1) * p) / 2 + (c(lat1 * p) * c(lat2 * p) * (1 - c((lon2 - lon1) * p))) / 2;
 
   return 12742 * Math.asin(Math.sqrt(a)); // 2 * R; R = 6371 km
 };
 
-function splitURL(url) {
-
-}
+function splitURL(url) {}
 
 /**
  *
@@ -109,8 +91,7 @@ function splitURL(url) {
  * @param suffix
  * @returns {string}
  */
-const maybePluralize = (count, noun, suffix = 's') =>
-  `${count} ${noun}${count !== 1 ? suffix : ''}`;
+const maybePluralize = (count, noun, suffix = 's') => `${count} ${noun}${count !== 1 ? suffix : ''}`;
 
 /**
  *
@@ -122,7 +103,8 @@ const maybePluralize = (count, noun, suffix = 's') =>
 const debounce = function (fn, time) {
   let timeout;
 
-  return function (...args) { // <-- not an arrow function
+  return function (...args) {
+    // <-- not an arrow function
     const functionCall = () => fn.apply(this, args);
 
     clearTimeout(timeout);
@@ -176,7 +158,7 @@ const once = function (func) {
  * @param obj
  * @returns {boolean|boolean}
  */
-const isEmpty = obj => [Object, Array].includes((obj || {}).constructor) && !Object.entries((obj || {})).length;
+const isEmpty = (obj) => [Object, Array].includes((obj || {}).constructor) && !Object.entries(obj || {}).length;
 
 const hasOwnProperty = Object.prototype.hasOwnProperty;
 
@@ -196,11 +178,12 @@ const hasOwn = (obj, prop) => hasOwnProperty.call(obj, prop);
  * @returns {*}
  */
 const get = (obj, path, defaultValue = undefined) => {
-  const travel = regexp =>
-    String.prototype.split
+  const travel = (regexp) => {
+    return String.prototype.split
       .call(path, regexp)
       .filter(Boolean)
       .reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
+  };
   const result = travel(/[,[\]]+?/) || travel(/[,[\].]+?/);
 
   return result === undefined || result === obj ? defaultValue : result;
@@ -208,22 +191,20 @@ const get = (obj, path, defaultValue = undefined) => {
 
 const arrayFromObj = (jsonObj, wantedFields) => {
   return wantedFields.map((key) => {
-    if (jsonObj.hasOwnProperty(key))
-      return jsonObj[key];
+    if (jsonObj.hasOwnProperty(key)) return jsonObj[key];
   });
 };
 
 const extractFromObj = (jsonObj, wantedFields) => {
   return Object.keys(jsonObj).reduce((obj, key) => {
-    if (wantedFields.includes(key))
-      obj[key] = jsonObj[key];
+    if (wantedFields.includes(key)) obj[key] = jsonObj[key];
 
     return obj;
   }, {});
 };
 
 const objectMatcher = (obj, matcher) => {
-  if (typeof(obj) !== 'object' || obj === null) return false;
+  if (typeof obj !== 'object' || obj === null) return false;
 
   let count = Object.keys(obj).length;
   const keys = Object.keys(obj);
@@ -231,30 +212,28 @@ const objectMatcher = (obj, matcher) => {
   if (count !== matcher.length) return false;
 
   matcher.forEach((item) => {
-    if (keys.indexOf(item) !== -1)
-      count--;
+    if (keys.indexOf(item) !== -1) count--;
   });
 
-  return (count === 0);
+  return count === 0;
 };
 
 exports = {
-  'partOfDay': partOfDay,
-  'toHour': toHour,
-  'hourFloor': hourFloor,
-  'getWeek': getWeek,
-  'distance': distance,
-  'maybePluralize': maybePluralize,
-  'debounce': debounce,
-  'throttle': throttle,
-  'once': once,
-  'isEmpty': isEmpty,
-  'hasOwn': hasOwn,
-  'get': get,
-  'arrayFromObj' : arrayFromObj,
-  'extractFromObj' : extractFromObj,
-  'objectMatcher' : objectMatcher
-
+  partOfDay: partOfDay,
+  toHour: toHour,
+  hourFloor: hourFloor,
+  getWeek: getWeek,
+  distance: distance,
+  maybePluralize: maybePluralize,
+  debounce: debounce,
+  throttle: throttle,
+  once: once,
+  isEmpty: isEmpty,
+  hasOwn: hasOwn,
+  get: get,
+  arrayFromObj: arrayFromObj,
+  extractFromObj: extractFromObj,
+  objectMatcher: objectMatcher
 };
 
 // module.exports = { partOfDay, toHour, hourFloor, distance, maybePluralize, debounce, throttle, once, isEmpty, hasOwn, get, Logger, LocalStorage };
