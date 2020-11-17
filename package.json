@@ -7,7 +7,7 @@
   "scripts": {
     "release": "vik patch -t",
     "clean": "rm -rf dist",
-    "prepublish": "yarn run clean && yarn run compile",
+    "prepare": "yarn run clean && yarn run compile",
     "test": "jest --coverage && yarn run compile",
     "compile:es": "tsc --declaration true --declarationMap true --module esnext --outDir './dist/es'",
     "compile:commonjs": "tsc --declaration true --declarationMap true --module commonjs --outDir './dist/commonjs'",
