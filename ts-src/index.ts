@@ -1,3 +1,4 @@
+export * from './LocalStorage';
 export * from './arrayFromObj';
 export * from './debounce';
 export * from './distance';
