@@ -1,8 +1,11 @@
 /**
+ * Get the value of an item inside an object
+ * @param obj The source object
+ * @param path The path to the object
+ * @param defaultValue A default value to be returned
  *
- * @param obj
- * @param path
- * @param defaultValue
+ * @example
+ *  U.get({ a: 1, b: 2 }, 'b') // => 2
  */
 export function get(obj: Object, path: string, defaultValue: any = undefined): any {
   const travel = (regexp: any) => {
