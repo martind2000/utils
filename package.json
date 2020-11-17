@@ -7,11 +7,11 @@
   "scripts": {
     "release": "vik patch -t",
     "clean": "rm -rf dist",
-    "prepare": "yarn run clean && yarn run compile",
-    "test": "jest --coverage && yarn run compile",
+    "prepare": "npm run clean && npm run compile",
+    "test": "jest --coverage && npm run compile",
     "compile:es": "tsc --declaration true --declarationMap true --module esnext --outDir './dist/es'",
     "compile:commonjs": "tsc --declaration true --declarationMap true --module commonjs --outDir './dist/commonjs'",
-    "compile": "yarn run clean && yarn run compile:es && yarn run compile:commonjs"
+    "compile": "npm run clean && npm run compile:es && npm run compile:commonjs"
   },
   "author": "Martin Donnelly",
   "license": "ISC",
