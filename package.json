@@ -1,11 +1,11 @@
 {
   "name": "@rakh/utils",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "dist/commonjs/index.js",
   "module": "dist/es/index.js",
   "jsnext:main": "dist/es/index.js",
   "scripts": {
-    "release": "vik patch -t",
+    "release": "node ./scripts/create-index.js && vik patch -t",
     "clean": "rm -rf dist",
     "prepare": "npm run clean && npm run compile",
     "test": "jest --coverage && npm run compile",

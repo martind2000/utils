@@ -3,6 +3,7 @@ export * from './arrayFromObj';
 export * from './debounce';
 export * from './distance';
 export * from './extractFromObj';
+export * from './get';
 export * from './hasOwn';
 export * from './hourFloor';
 export * from './isEmpty';
